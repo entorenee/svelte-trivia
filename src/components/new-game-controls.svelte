@@ -7,9 +7,9 @@
   let categorySelected = '260'
 
   const clueCountOptions = [
-  { label: 5, value: 5 },
-  { label: 10, value: 10 },
-  { label: 25, value: 25 },
+    { label: 5, value: 5 },
+    { label: 10, value: 10 },
+    { label: 25, value: 25 },
   ]
 
   const categoryOptions = [
@@ -32,20 +32,19 @@
 </script>
 
 <style>
+
 </style>
 
 <form on:submit|preventDefault={fetchClues}>
   <Dropdown
-    id='clue-count-select'
-    label='Number of clues'
+    id="clue-count-select"
+    label="Number of clues"
     options={clueCountOptions}
-    bind:selected={clueSelected}
-  />
+    bind:selected={clueSelected} />
   <Dropdown
-    id='category-select'
-    label='Category'
+    id="category-select"
+    label="Category"
     options={categoryOptions}
-    bind:selected={categorySelected}
-  />
+    bind:selected={categorySelected} />
   <button>Get New Clues</button>
 </form>
