@@ -1,11 +1,12 @@
 <script>
-	export let name;
+  import NewGameControls from './components/new-game-controls.svelte'
 </script>
 
 <style>
-	h1 {
-		color: purple;
-	}
+  h1 {
+    color: purple;
+  }
 </style>
 
-<h1>Hello {name}!</h1>
+<h1>Svelte Trivia</h1>
+<NewGameControls />
