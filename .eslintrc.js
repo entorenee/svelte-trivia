@@ -5,6 +5,7 @@ module.exports = {
     {
       files: ['*.svelte'],
       rules: {
+        'import/first': 'off',
         'import/no-mutable-exports': 'off',
       },
     },
