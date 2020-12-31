@@ -10,4 +10,15 @@ function cluesStore() {
   }
 }
 
+function ClueCounter() {
+  const { set, subscribe, update } = writable(0)
+
+  return {
+    increment: update(n => n++),
+    reset: () => set(0),
+    subscribe,
+  }
+}
+
 export const clues = cluesStore()
+// export const clueIndex = 

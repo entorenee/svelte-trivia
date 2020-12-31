@@ -32,19 +32,34 @@
 </script>
 
 <style>
+  .control-container {
+    display: flex;
+    align-items: center;
+  }
 
+  .control-container > *:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+
+  .dropdown {
+    font-weight: bold;
+  }
 </style>
 
-<form on:submit|preventDefault={fetchClues}>
-  <Dropdown
-    id="clue-count-select"
-    label="Number of clues"
-    options={clueCountOptions}
-    bind:selected={clueSelected} />
-  <Dropdown
-    id="category-select"
-    label="Category"
-    options={categoryOptions}
-    bind:selected={categorySelected} />
+<form class="control-container" on:submit|preventDefault={fetchClues}>
+  <div class="dropdown">
+    <Dropdown
+      id="clue-count-select"
+      label="Number of clues"
+      options={clueCountOptions}
+      bind:selected={clueSelected} />
+  </div>
+  <div class="dropdown">
+    <Dropdown
+      id="category-select"
+      label="Category"
+      options={categoryOptions}
+      bind:selected={categorySelected} />
+  </div>
   <button>Get New Clues</button>
 </form>
